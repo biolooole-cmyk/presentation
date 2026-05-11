@@ -30,170 +30,310 @@ import {
 const SIMULATIONS = [
     {
         title: 'Ферментативний конструктор',
-        description: 'Дослідження кінетики ферментів. Моделювання активного центру та специфічності субстрату.',
+        description: 'Дослідження роботи ферментів, моделювання активного центру, впливу температури та pH.',
         url: 'https://claude.ai/public/artifacts/549c2231-1158-4d98-80a8-6b008dbab48c',
         emoji: '🧪',
         level: 'Middle'
     },
     {
         title: 'Ланцюги живлення',
-        description: 'Моделювання енергетичних трофічних рівнів та стійкості екосистеми.',
+        description: 'Створення харчових мереж, відстеження потоків енергії та балансу між видами.',
         url: 'https://trophic-weave-hub.lovable.app',
         emoji: '🌱',
         level: 'Advanced'
     },
     {
         title: 'Гомеостаз глюкози',
-        description: 'Система негативного зворотного зв’язку. Роль інсуліну та глюкагону.',
+        description: 'Механізм підтримки стабільної концентрації цукру та роль гормонів.',
         url: 'https://glucose-flow-explorer.lovable.app',
         emoji: '🩸',
         level: 'Middle'
     },
     {
         title: 'BioSolve Lab',
-        description: 'Алгоритмічне розв’язання задач з генетики та молекулярної біології.',
+        description: 'Набір задач з молекулярної біології: від ДНК до мутацій.',
         url: 'https://bio-quest-shuffle.lovable.app',
         emoji: '🧬',
         level: 'Advanced'
     },
     {
         title: 'Епідемія в місті',
-        description: 'Математичне моделювання поширення інфекції (SIR-модель) та карантину.',
+        description: 'Математичне моделювання поширення інфекції та ефективності карантину.',
         url: 'https://websim.com/p/lf0mseqavivina_ji8fs',
         emoji: '🦠',
         level: 'First'
     },
     {
-        title: 'Газообмін легень',
-        description: 'Фізика дихання: дифузія газів крізь альвеолярно-капілярну мембрану.',
+        title: 'Життєва ємність легень',
+        description: 'Газообмін у легенях та роль рухів грудної клітки при диханні.',
         url: 'https://light-lung-bloom.lovable.app',
         emoji: '🫁',
         level: 'First'
     },
     {
         title: 'Клітинний поділ',
-        description: 'Візуалізація мітотичного циклу та передачі спадковості.',
+        description: 'Симуляція мітозу: етапи розподілу хромосом і формування нових клітин.',
         url: 'https://cell-voyage-ukraine.lovable.app',
         emoji: '⚛️',
         level: 'Middle'
     },
     {
         title: 'Генетичний міксер',
-        description: 'Статистичний аналіз розщеплення ознак за Менделем та комбінаторика генів.',
+        description: 'Віртуальна лабораторія для вивчення законів спадковості Менделя.',
         url: 'https://biolooole-cmyk.github.io/virtugenlab/',
         emoji: '🐭',
         level: 'Advanced'
     },
     {
         title: 'ЦНС симулятор',
-        description: 'Нейрофізіологічна карта мозку та локалізація функцій півкуль.',
+        description: 'Структура мозку та функції його відділів у забезпеченні життєдіяльності.',
         url: 'https://brain-bright-explore.lovable.app',
         emoji: '🧠',
         level: 'First'
     },
     {
+        title: 'Нефрон: фільтрація',
+        description: 'Утворення вторинної сечі та очищення крові в нирках людини.',
+        url: 'https://nephron-journey.lovable.app',
+        emoji: '💧',
+        level: 'Middle'
+    },
+    {
+        title: 'Мурашник',
+        description: 'Колективна поведінка та самоорганізація колонії на основі простих правил.',
+        url: 'https://websim.com/p/f7jf8470zty23q0i7n3d',
+        emoji: '🐜',
+        level: 'First'
+    },
+    {
+        title: 'Повна екосистема',
+        description: 'Взаємодія рослин, травоїдних та хижаків у природній системі.',
+        url: 'https://life-cycle-lab.lovable.app',
+        emoji: '🌍',
+        level: 'Advanced'
+    },
+    {
+        title: 'Цикли гельмінтів',
+        description: 'Візуалізація розвитку паразитів, шляхів зараження та заходів профілактики.',
+        url: 'https://life-cycle-explorer-ukr.lovable.app',
+        emoji: '🐛',
+        level: 'Middle'
+    },
+    {
+        title: 'Автономна НС',
+        description: 'Регуляція роботи органів під час стресу та відпочинку нервової системи.',
+        url: 'https://balance-of-life-sim.lovable.app',
+        emoji: '⚡',
+        level: 'First'
+    },
+    {
+        title: 'Рефлекторна дуга',
+        description: 'Послідовність передачі нервового сигналу від рецептора до органа.',
+        url: 'https://reflex-arc-lab.lovable.app',
+        emoji: '🔥',
+        level: 'First'
+    },
+    {
         title: 'Штучний добір',
-        description: 'Еволюція під контролем людини. Створення нових сортів та порід.',
+        description: 'Основи селекції: зміна спадкових ознак під контролем людини.',
         url: 'https://gene-garden-wizard.lovable.app',
         emoji: '🐕',
         level: 'Middle'
     },
     {
-        title: 'Фотосинтез',
-        description: 'Вивчення світлової фази та залежності біомаси від світла.',
-        url: 'https://photosynthesis-lab.lovable.app',
-        emoji: '☀️',
+        title: 'Тренажер серця',
+        description: 'Інтерактивна модель серцевого циклу та фізіології кровообігу.',
+        url: 'https://claude.ai/public/artifacts/1c90a43a-2010-425d-8b4f-42bb893d69e7',
+        emoji: '🫀',
         level: 'Middle'
     },
     {
-        title: 'Клітинне дихання',
-        description: 'Енергетичний обмін в мітохондріях та синтез АТФ.',
-        url: 'https://mito-energy-sim.lovable.app',
-        emoji: '🔋',
-        level: 'Advanced'
-    },
-    {
-        title: 'Імунітет людини',
-        description: 'Вроджений та адаптивний імунітет. Процес фагоцитозу.',
-        url: 'https://immune-chronicle.lovable.app',
-        emoji: '🛡️',
-        level: 'Middle'
-    },
-    {
-        title: 'Екологічні закони',
-        description: 'Вплив лімітуючих факторів на ріст популяції. Закон Лібіха.',
-        url: 'https://life-laws-play.lovable.app',
-        emoji: '⚖️',
-        level: 'Advanced'
-    },
-    {
-        title: 'Станція переливання',
-        description: 'Групи крові AB0 та резус-фактор. Логіка сумісності.',
-        url: 'https://biolooole-cmyk.github.io/bloodsimulator/',
-        emoji: '💉',
-        level: 'Middle'
-    },
-    {
-        title: 'Плантагочи',
-        description: 'STEM-симулятор вирощування рослини: догляд та умови.',
-        url: 'https://biolooole-cmyk.github.io/plantagotchi/',
-        emoji: '🪴',
-        level: 'First'
-    },
-    {
-        title: 'Нефрон',
-        description: '3D-модель фільтрації в нирках на клітинному рівні.',
+        title: 'Нефрон 3D',
+        description: 'Клітинно-тканинна модель клубочкової фільтрації та реабсорбції.',
         url: 'https://nephro-flow-lab.lovable.app',
         emoji: '🧶',
         level: 'Advanced'
     },
     {
         title: 'Згортування крові',
-        description: 'Процес гемостазу: від пошкодження до згустку.',
+        description: 'Процес гемостазу: від пошкодження судини до фібринового згустку.',
         url: 'https://clot-compass.lovable.app',
         emoji: '🩹',
         level: 'Middle'
     },
     {
-        title: 'Слуховий аналізатор',
-        description: 'Трансформація звукової хвилі в нервовий імпульс.',
-        url: 'https://pelajaran-3d.lovable.app',
-        emoji: '👂',
+        title: 'Око: будова',
+        description: 'Формування зображення на сітківці та особливості сприйняття світла.',
+        url: 'https://biolooole-cmyk.github.io/eyes/',
+        emoji: '👁️',
+        level: 'First'
+    },
+    {
+        title: 'Nutrisim',
+        description: 'Аналіз раціону, метаболічних процесів та збалансованого харчування.',
+        url: 'https://biolooole-cmyk.github.io/nutritionsimulator/',
+        emoji: '🍎',
         level: 'Middle'
     },
     {
+        title: 'Шкіра людини',
+        description: 'Будова шкіри, механізми терморегуляції та дослідження опіків.',
+        url: 'https://skin-lab-ukraine.lovable.app',
+        emoji: '🧴',
+        level: 'Middle'
+    },
+    {
+        title: 'Лабораторія фотосинтезу',
+        description: 'Дослідження впливу CO2 та світла на екосистемну продуктивність.',
+        url: 'https://biolooole-cmyk.github.io/photosynthesislab/',
+        emoji: '🌿',
+        level: 'Advanced'
+    },
+    {
+        title: 'Метаболізм',
+        description: 'Енергетичний обмін клітини та регуляція маси тіла.',
+        url: 'https://cell-spark-flow.lovable.app/',
+        emoji: '🔋',
+        level: 'Advanced'
+    },
+    {
+        title: 'Дихання людини',
+        description: 'Взаємозв’язок вентиляції легень та інтенсивності газообміну.',
+        url: 'https://breath-deep-analyze.lovable.app',
+        emoji: '🌬️',
+        level: 'First'
+    },
+    {
+        title: 'Гормони',
+        description: 'Віртуальна лабораторія ендокринної системи та гормонального балансу.',
+        url: 'https://biolooole-cmyk.github.io/gormonsimuliator/',
+        emoji: '⚖️',
+        level: 'Middle'
+    },
+    {
+        title: 'Полювання Амеби',
+        description: 'Механізм фагоцитозу та рух одноклітинного організму.',
+        url: 'https://claude.ai/public/artifacts/58265d05-032e-4e10-9270-b78f6b517cd5',
+        emoji: '🫧',
+        level: 'First'
+    },
+    {
+        title: 'Архітектор квітки',
+        description: 'Морфологія та структура квіток, адаптація до типів запилення.',
+        url: 'https://biolooole-cmyk.github.io/flowersimulation/',
+        emoji: '🌸',
+        level: 'Middle'
+    },
+    {
+        title: 'Мінливість',
+        description: 'Побудова варіаційної кривої та аналіз норми реакції організмів.',
+        url: 'https://pheno-play-lab.lovable.app',
+        emoji: '📉',
+        level: 'Middle'
+    },
+    {
+        title: 'Мікросвіт (Websim)',
+        description: 'Популяційна динаміка найпростіших та конкуренція за ресурси.',
+        url: 'https://websim.com/p/o2_8w84xtx5twd18dvpw',
+        emoji: '🔬',
+        level: 'First'
+    },
+    {
         title: 'Життя в краплі',
-        description: 'Екосистема мікросвіту: динаміка найпростіших.',
+        description: 'Мікроскопічне життя найпростіших та їх екологічні ролі.',
         url: 'https://biolooole-cmyk.github.io/lifeinadrop/',
         emoji: '🔬',
         level: 'First'
     },
     {
+        title: 'Еко-закони',
+        description: 'Вплив факторів середовища на ріст популяції: закон Лібіха.',
+        url: 'https://life-laws-play.lovable.app',
+        emoji: '📜',
+        level: 'Advanced'
+    },
+    {
+        title: 'Станція крові',
+        description: 'Визначення сумісності груп крові за системою AB0 та резусом.',
+        url: 'https://biolooole-cmyk.github.io/bloodsimulator/',
+        emoji: '💉',
+        level: 'Middle'
+    },
+    {
+        title: 'Імунітет',
+        description: 'Робота вродженого та адаптивного імунітету проти патогенів.',
+        url: 'https://immune-chronicle.lovable.app',
+        emoji: '🛡️',
+        level: 'Middle'
+    },
+    {
         title: 'Транспорт газів',
-        description: 'Зв’язування кисню гемоглобіном та транспорт вуглекислого газу.',
-        url: 'https://oxygen-transport-sim.lovable.app',
+        description: 'Зв’язування кисню гемоглобіном та газообмін у тканинах.',
+        url: 'https://claude.ai/public/artifacts/7a4e5ded-f0c0-4ca1-ba73-1f7bb83210cd',
         emoji: '⭕',
         level: 'Middle'
     },
     {
         title: 'Енергобаланс',
-        description: 'Розрахунок калорійності раціону та енергетичних витрат.',
-        url: 'https://energy-balance-ua.lovable.app',
-        emoji: '🍎',
+        description: 'Аеробне дихання, синтез АТФ та метаболічні шляхи.',
+        url: 'https://biolooole-cmyk.github.io/energysimulator/',
+        emoji: '⚡',
+        level: 'Middle'
+    },
+    {
+        title: 'Амеба (Websim)',
+        description: 'Поведінка найпростіших та реакція на подразники середовища.',
+        url: 'https://websim.com/p/mw_1gf9e11znhkh6n3ws',
+        emoji: '🫧',
+        level: 'First'
+    },
+    {
+        title: 'Слуховий аналізатор',
+        description: 'Візуалізація проходження звукової хвилі крізь вухо до мозку.',
+        url: 'https://pelajaran-3d.lovable.app',
+        emoji: '👂',
+        level: 'Middle'
+    },
+    {
+        title: 'Плантагочи',
+        description: 'Догляд за віртуальною рослиною та умови її оптимального росту.',
+        url: 'https://biolooole-cmyk.github.io/plantagotchi/',
+        emoji: '🪴',
+        level: 'First'
+    },
+    {
+        title: 'Фотосинтез PRO',
+        description: 'Хлоропласт: світлова фаза реакцій та цикл Кальвіна.',
+        url: 'https://chloro-flow-lab.lovable.app',
+        emoji: '☀️',
         level: 'Middle'
     },
     {
         title: 'Око людини',
-        description: 'Акомодація кришталика та механізм сприйняття світла сітківкою.',
-        url: 'https://eye-focus-explore.lovable.app',
-        emoji: '👁️',
-        level: 'First'
+        description: 'Аналіз порушень зору та активності рецепторів сітківки.',
+        url: 'https://vision-lab-interactive.lovable.app',
+        emoji: '👀',
+        level: 'Middle'
     },
     {
-        title: 'Будова вуха',
-        description: 'Анатомія середнього та внутрішнього вуха (завитки та кісточки).',
-        url: 'https://ear-mechanics-3d.lovable.app',
-        emoji: '🐚',
+        title: 'Еко-ланцюги',
+        description: 'Трофічні зв’язки та передача речовин між рівнями екосистеми.',
+        url: 'https://biolooole-cmyk.github.io/foodecology/',
+        emoji: '🕸️',
+        level: 'Advanced'
+    },
+    {
+        title: 'Анатомія тварин',
+        description: 'Порівняльний аналіз внутрішньої будови різних груп тварин.',
+        url: 'https://biolooole-cmyk.github.io/anatomyanimal/',
+        emoji: '🦴',
+        level: 'Middle'
+    },
+    {
+        title: 'Цикли рослин',
+        description: 'Онтогенез: від проростання насіння до цвітіння та запліднення.',
+        url: 'https://biolooole-cmyk.github.io/plantcikle/',
+        emoji: '🌲',
         level: 'Middle'
     }
 ];
@@ -205,8 +345,8 @@ const Background = () => {
   return (
     <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none bg-brand-bg uppercase">
       <div className="absolute inset-0 grain" />
-      <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-brand-light opacity-25 blur-[120px] rounded-full" />
-      <div className="absolute bottom-[-20%] left-[-10%] w-[800px] h-[800px] bg-brand-ink opacity-15 blur-[150px] rounded-full" />
+      <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-brand-light opacity-30 blur-[120px] rounded-full" />
+      <div className="absolute bottom-[-20%] left-[-10%] w-[800px] h-[800px] bg-brand-ink opacity-20 blur-[150px] rounded-full" />
       
       {/* Floating Chaotic Bubbles */}
       {bubbles.map((_, i) => (
@@ -216,7 +356,7 @@ const Background = () => {
             x: (Math.random() * 100) + "vw", 
             y: (Math.random() * 100 + 100) + "vh",
             scale: Math.random() * 0.8 + 0.4,
-            opacity: Math.random() * 0.5 + 0.3
+            opacity: Math.random() * 0.6 + 0.4
           }}
           animate={{ 
             y: ["110vh", "50vh", "-20vh"],
@@ -234,7 +374,7 @@ const Background = () => {
             delay: Math.random() * -40,
             ease: "linear"
           }}
-          className="absolute w-8 h-8 rounded-full bg-brand-light/50 backdrop-blur-md border border-white/40 shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+          className="absolute w-8 h-8 rounded-full bg-brand-light/60 backdrop-blur-md border border-white/50 shadow-[0_0_20px_rgba(255,255,255,0.4)]"
         />
       ))}
     </div>
@@ -256,18 +396,18 @@ const Navigation = ({ onNext, onPrev, isFirst, isLast }: any) => (
     <button 
       onClick={onPrev}
       disabled={isFirst}
-      className={`group flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest transition-all duration-300 ${isFirst ? 'opacity-20' : 'opacity-60 hover:opacity-100 hover:text-brand-ink'}`}
+      className={`group flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest transition-all duration-300 ${isFirst ? 'opacity-20' : 'opacity-100 hover:text-brand-ink'}`}
     >
       <ChevronLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
       <span>Назад</span>
     </button>
     
-    <div className="h-4 w-[1px] bg-brand-ink/10" />
+    <div className="h-4 w-[1px] bg-brand-ink/20" />
     
     <button 
       onClick={onNext}
       disabled={isLast}
-      className={`group flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest transition-all duration-300 ${isLast ? 'opacity-20' : 'opacity-60 hover:opacity-100 hover:text-brand-ink'}`}
+      className={`group flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest transition-all duration-300 ${isLast ? 'opacity-20' : 'opacity-100 hover:text-brand-ink'}`}
     >
       <span>Далі</span>
       <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -282,7 +422,7 @@ const SimulationModal = ({ simulation, onClose }: any) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-brand-bg/80 backdrop-blur-xl p-4 md:p-12"
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-brand-bg/95 backdrop-blur-2xl p-4 md:p-12"
     >
       <div className="relative w-full h-full max-w-7xl glass rounded-3xl overflow-hidden flex flex-col shadow-2xl">
         <div className="p-6 flex items-center justify-between border-b border-brand-ink/10">
@@ -325,7 +465,7 @@ const slidesContent = [
     meta: [
       'Капліна Олександра Олексіївна',
       'Вчитель біології, спеціаліст «вищої» категорії',
-      'Криворізька гімназія № 52 | 2026'
+      'Криворізька гімназія №52 "Діалог" КМР | 2026'
     ]
   },
   {
@@ -453,7 +593,7 @@ const slidesContent = [
     type: 'closing',
     title: 'ШІ підсилює вчителя, не замінює його',
     quote: '«Майбутнє освіти — не в тому, хто знає більше. А в тому, хто вміє навчати з новими інструментами. І цей вчитель — ви.»',
-    meta: 'Капліна О.О. | Криворізька гімназія № 52 | 2026'
+    meta: 'Капліна О.О. | Криворізька гімназія №52 "Діалог" КМР | 2026'
   }
 ];
 
@@ -505,14 +645,14 @@ export default function App() {
                 >
                   {slide.label}
                 </motion.span>
-                <h1 className="text-5xl md:text-[80px] font-display font-black leading-[0.9] tracking-tighter text-brand-ink drop-shadow-sm">
+                <h1 className="text-5xl md:text-[80px] font-display font-black leading-[0.9] tracking-tighter text-brand-ink text-glow-green">
                   {slide.title}
                 </h1>
-                <p className="text-xl md:text-3xl font-serif italic text-brand-ink/80 max-w-3xl leading-relaxed">
+                <p className="text-xl md:text-3xl font-serif italic text-brand-ink max-w-3xl leading-relaxed">
                   {slide.subtitle}
                 </p>
-                <div className="mt-4 space-y-2 opacity-70 border-l-2 border-brand-ink/20 pl-6">
-                   {Array.isArray(slide.meta) && slide.meta.map((m, i) => <p key={i} className="text-xs font-bold uppercase tracking-[0.1em]">{m}</p>)}
+                <div className="mt-4 space-y-2 border-l-4 border-brand-ink pl-6">
+                   {Array.isArray(slide.meta) && slide.meta.map((m, i) => <p key={i} className="text-sm font-bold uppercase tracking-[0.1em] text-brand-ink">{m}</p>)}
                 </div>
               </div>
             )}
@@ -520,7 +660,7 @@ export default function App() {
             {/* ROUTE SLIDE */}
             {slide.type === 'route' && (
               <div className="space-y-12">
-                <h2 className="text-5xl font-display font-bold">{slide.title}</h2>
+                <h2 className="text-5xl font-display font-bold text-brand-ink text-glow-green">{slide.title}</h2>
                 <div className="grid md:grid-cols-2 gap-4">
                   {slide.items?.map((item: any, idx: number) => (
                     <motion.div 
@@ -528,12 +668,12 @@ export default function App() {
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.4 + idx * 0.05 }}
-                      className="flex items-center gap-6 p-4 glass rounded-2xl group cursor-pointer hover:bg-brand-ink/10"
+                      className="flex items-center gap-6 p-4 glass rounded-2xl group cursor-pointer hover:bg-brand-ink hover:text-brand-light transition-all"
                     >
                       <div className="w-10 h-10 rounded-lg bg-brand-ink text-brand-light flex items-center justify-center font-bold">
                         {idx + 1}
                       </div>
-                      <span className="text-xl opacity-80">{item}</span>
+                      <span className="text-xl font-bold">{item}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -554,8 +694,8 @@ export default function App() {
                       className="p-8 rounded-[32px] glass group hover:bg-brand-ink hover:text-brand-light transition-all duration-700 shadow-xl"
                     >
                       <span className="text-[9px] opacity-40 font-black tracking-[0.2em] mb-4 block uppercase">Scenario 0{idx + 1}</span>
-                      <h3 className="text-2xl font-bold mb-3 tracking-tight">{item.title}</h3>
-                      <p className="text-base opacity-80 group-hover:opacity-100 leading-relaxed font-medium">{item.desc}</p>
+                      <h3 className="text-2xl font-bold mb-3 tracking-tight text-brand-ink">{item.title}</h3>
+                      <p className="text-base text-brand-ink group-hover:text-brand-light leading-relaxed font-medium">{item.desc}</p>
                     </motion.div>
                   ))}
                 </div>
@@ -589,7 +729,7 @@ export default function App() {
             {/* PROCESS SLIDE */}
             {slide.type === 'process' && (
               <div className="space-y-16">
-                 <h2 className="text-5xl font-display font-bold text-center mb-20">{slide.title}</h2>
+                 <h2 className="text-5xl font-display font-bold text-center mb-20 text-brand-ink drop-shadow-sm">{slide.title}</h2>
                  <div className="relative flex flex-wrap justify-center gap-4">
                     {slide.steps?.map((step: any, idx: number) => (
                       <div key={idx} className="flex items-center gap-4 group">
@@ -641,8 +781,8 @@ export default function App() {
               <div className="w-full h-full flex flex-col gap-6">
                 <div className="flex justify-between items-end">
                    <div>
-                      <h2 className="text-3xl font-display font-black tracking-tight mb-1">{slide.title}</h2>
-                      <p className="text-sm font-serif italic opacity-70">{slide.description}</p>
+                     <h2 className="text-3xl font-display font-black tracking-tight mb-1 text-brand-ink text-glow-green">{slide.title}</h2>
+                      <p className="text-sm font-serif italic text-brand-ink/70">{slide.description}</p>
                    </div>
                    <div className="text-[10px] font-bold opacity-30 uppercase tracking-widest bg-brand-ink/5 px-3 py-1 rounded-full border border-brand-ink/5">
                       {SIMULATIONS.length} активних проєктів
@@ -658,19 +798,19 @@ export default function App() {
                       onClick={() => setActiveSimulation(item)}
                       className="group relative h-32 rounded-2xl overflow-hidden cursor-pointer shadow-md border border-brand-light/20 bg-brand-light/10"
                     >
-                      <div className="absolute inset-0 flex items-center justify-center text-4xl select-none group-hover:scale-110 transition-transform duration-700 drop-shadow-[0_4px_4px_rgba(0,0,0,0.05)]">
+                      <div className="absolute inset-0 flex items-center justify-center text-5xl select-none group-hover:scale-110 transition-transform duration-700 drop-shadow-[0_4px_4px_rgba(0,0,0,0.1)]">
                         {item.emoji}
                       </div>
-                      <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/90 via-brand-ink/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
-                      <div className="absolute bottom-0 left-0 right-0 p-3 flex flex-col gap-0">
-                        <span className="text-[7px] font-black uppercase tracking-widest text-brand-light/40">{item.level}</span>
-                        <h3 className="text-[11px] font-bold text-brand-light leading-tight tracking-tight truncate">{item.title}</h3>
+                      <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/95 via-brand-ink/30 to-transparent opacity-90 group-hover:opacity-100 transition-opacity" />
+                      <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col gap-0.5">
+                        <span className="text-[8px] font-black uppercase tracking-widest text-white/60">{item.level}</span>
+                        <h3 className="text-sm font-bold text-white leading-tight tracking-tight">{item.title}</h3>
                         <div className="h-0 group-hover:h-auto overflow-hidden opacity-0 group-hover:opacity-100 transition-all duration-300">
-                          <p className="text-[8px] text-brand-light/80 line-clamp-1 font-semibold leading-normal">{item.description}</p>
+                          <p className="text-[10px] text-white/90 line-clamp-2 font-medium leading-normal mt-1">{item.description}</p>
                         </div>
                       </div>
-                      <div className="absolute top-2 right-2 p-0.5 rounded-full glass text-brand-light transform translate-x-8 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500">
-                        <Maximize2 size={8} />
+                      <div className="absolute top-3 right-3 p-1 rounded-full glass text-white transform translate-x-8 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500">
+                        <Maximize2 size={10} />
                       </div>
                     </motion.div>
                   ))}
@@ -716,8 +856,8 @@ export default function App() {
                     {slide.quote}
                   </p>
                 </div>
-                <div className="space-y-2 pt-12 border-t border-brand-ink/10 w-full opacity-40">
-                   <p className="text-sm font-bold tracking-widest uppercase">{slide.meta}</p>
+                <div className="space-y-2 pt-12 border-t border-brand-ink/20 w-full opacity-100">
+                   <p className="text-sm font-bold tracking-widest uppercase text-brand-ink">{slide.meta}</p>
                 </div>
               </div>
             )}
@@ -729,7 +869,7 @@ export default function App() {
                 <p className="text-6xl font-serif italic text-brand-ink/40 leading-none">
                   {slide.quote}
                 </p>
-                <p className="text-2xl leading-relaxed opacity-80">
+                <p className="text-2xl leading-relaxed text-brand-ink">
                   {slide.text}
                 </p>
               </div>
