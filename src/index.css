@@ -7,7 +7,7 @@
   --font-serif: "Playfair Display", serif;
   
   --color-brand-bg: #71a15c;
-  --color-brand-ink: #0d1f0e;
+  --color-brand-ink: #1e3a1f;
   --color-brand-light: #f0f7f1;
   
   --animate-float: float 6s ease-in-out infinite;
@@ -41,11 +41,11 @@
   }
 
   .text-shadow-sm {
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   }
 
   .text-glow-green {
-    text-shadow: 0 0 20px rgba(13, 31, 14, 0.4), 0 0 10px rgba(255, 255, 255, 0.2);
+    text-shadow: 0 0 15px rgba(30, 58, 31, 0.3), 0 0 5px rgba(255, 255, 255, 0.15);
   }
 }
 
